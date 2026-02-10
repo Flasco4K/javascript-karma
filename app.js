@@ -1,41 +1,45 @@
 // ARRAY
-const db = ["FLASCO", "CANMERTİNYO", "Alex Pereira", "Tom Aspinall", "Illia Topuria"];
+const db = [
+    { id: 1, name: "Emirhan Demirhan", age: 22 },
+    { id: 2, name: "Alex Pereira", age: 38 },
+    { id: 3, name: "İslam Makhachev", age: 34 }
+];
 
 // CREATE - EKLE
-function peopleAdd(isim) {
-    db.push(isim);
-    console.log(`${isim} Listeye Eklendi.`);
+function peopleAdd(name, age) {
+    const newId = db.length + 1;
+    const newObject = { id: newId, name: name, age: age };
+    db.push(newObject);
+    console.log(`${name} Listeye Eklendi.`);
 };
-
-// peopleAdd("Max Holloway");
-// console.log(db);
+// peopleAdd("Max Holloway", 32);
+// console.table(db);
 
 // DELETE - SİLME
-function peopleDelete(isim) {
-
-    const index = db.indexOf(isim);
-    if (index > -1) {
+function peopleDelete(id) {
+    const index = db.findIndex(kisi => kisi.id === id);
+    if (index !== -1) {
+        const deletedName = db[index].name;
         db.splice(index, 1);
-        console.log(`${isim} Silindi.`);
+        console.log(`ID: ${id} (${deletedName}) başarıyla silindi`);
     } else {
-        console.log("Böyle bir Kullanıcı Bulunamadı.")
+        console.log(`Hata ${id} ID'li bir kullanıcı bulunamadı!`);
     }
 };
+// peopleDelete(1);
+// console.table(db)
 
 // UPDATE GÜNCELLEME
-function peopleUpdate(eskiIsim, yeniIsim) {
-    const index = db.indexOf(eskiIsim);
-
-    if (index > -1) {
-        db[index] = yeniIsim;
-        console.log(`${eskiIsim}, ${yeniIsim} Olarak Güncellendi.`);
+function peopleUpdate(id, newName, newAge) {
+    const index = db.findIndex(kisi => kisi.id === id);
+    if (index !== -1) {
+        db[index].name = newName;
+        db[index].age = newAge;
+        console.log(`ID: ${id} (${newName})  başarıyla güncellendi`);
     } else {
-        console.log("Güncellenecek öğrenci bulunamadı.");
+        console.log(`Hata ${id} ID'li bir kullanıcı bulunamadı!`);
     }
 };
-
-// READ LİSTELEME - KONTROL İÇİN
-function listeyiGoster() {
-    console.log("Güncel Liste:", db);
-}
+// peopleUpdate(1, "Charles Oliveira", 34);
+// console.table(db);
 
