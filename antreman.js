@@ -18,3 +18,18 @@ const db = [
 // const oneName = db.find(kisi => kisi.name==="Max Holloway");
 // console.table(oneName);
 
+//"Bana yaşı 30'dan BÜYÜK olanların SADECE İSİMLERİNİ getir."
+// const people = db.filter(kisi=> kisi.age > 30).map(kisi=> kisi.name);
+// console.table(people);
+
+//"Bu listeyi bana YAŞA GÖRE sırala. En GENÇ olan en üstte (ilk sırada), en yaşlı en altta olsun."
+// const siraliListe = db.sort((a, b) => a.age - b.age);
+// console.table(siraliListe);
+
+//"Bu takımdaki herkesin yaşlarını topla. Bana tek bir sayı ver (Toplam Yaş)."
+// const result = db.reduce((toplam, kisi) => toplam + kisi.age, 0)
+// console.log(result);
+
+//"Bu takımın yaş ortalaması kaç? Bana virgülsüz, tam sayı olarak ver."
+// const averageAge = Math.round(result / db.length);
+// console.log(`Takımın Yaş Ortalaması: ${averageAge}`);
