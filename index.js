@@ -22,3 +22,11 @@ const urunler = [
 //Soru 4: "Depoda şu an STOKTA OLAN (stock: true) ürünlerin toplam değeri kaç para? Bana tek bir sayı lazım."
 // const depo = urunler.filter(k => k.stock == true).reduce((toplam, product) => toplam + product.price, 0);
 // console.table(depo);
+
+//Soru 5: "Kullanıcının aradığı kelime ('phone'), ürünün isminin içinde geçiyor mu? Büyük/Küçük harf takıntısı olmadan bana o ürünleri bul."
+// const products = urunler.filter(k => k.name.toLocaleLowerCase().includes("phone"));
+// console.table(products);
+
+//Soru 6 : "Bana 'Telefon' kategorisindeki, fiyatı 50.000 TL'den AZ OLAN (<=) ürünleri getir. Ama listeyi UCUZDAN PAHALIYA doğru sırala."
+// const products = urunler.filter(k => k.category == 'Telefon' && k.price < 50000).sort((a, b) => a.price - b.price);
+// console.table(products);
