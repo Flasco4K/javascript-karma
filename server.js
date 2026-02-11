@@ -22,4 +22,6 @@ const siparisler = [
 // const bigProduct = siparisler.filter(b => b.durum !== "İptal").sort((a, b) => b.tutar - a.tutar)[0];
 // console.table(bigProduct);
 
-//Soru 5: 
+//Soru 5: Bana Ahmet'in TOPLAM KAÇ ADET Ürün aldığını bul."
+// const ahmetProduct = siparisler.filter(a => a.musteri == "Ahmet Yilmaz").reduce((toplam, product) => toplam + product.items.length, 0);
+// console.log(ahmetProduct);
