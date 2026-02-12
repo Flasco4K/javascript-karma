@@ -1,23 +1,23 @@
-const profile = {
-    username: "coder_ali",
-    fullName: "Ali Yilmaz",
-    location: {
-        city: "İstanbul",
-        country: "Türkiye",
-        address: {
-            street: "Bağdat Cad.",
-            zip: 34000
-        }
-    },
-    social: {
-        twitter: "@ali_code",
-        linkedin: "ali-yilmaz-dev"
-    },
-    posts: [
-        { id: 1, title: "JavaScript Öğreniyorum", likes: 150 },
-        { id: 2, title: "React Çok İyiymiş", likes: 230 }
-    ]
-};
+// const profile = {
+//     username: "coder_ali",
+//     fullName: "Ali Yilmaz",
+//     location: {
+//         city: "İstanbul",
+//         country: "Türkiye",
+//         address: {
+//             street: "Bağdat Cad.",
+//             zip: 34000
+//         }
+//     },
+//     social: {
+//         twitter: "@ali_code",
+//         linkedin: "ali-yilmaz-dev"
+//     },
+//     posts: [
+//         { id: 1, title: "JavaScript Öğreniyorum", likes: 150 },
+//         { id: 2, title: "React Çok İyiymiş", likes: 230 }
+//     ]
+// };
 
 //Soru 1: Profil sayfasında kullanıcının Şehri ve Posta Kodunu göstermemiz lazım.
 // const { location: { city, address: { zip } } } = profile;
@@ -50,4 +50,33 @@ const profile = {
 // console.log("--- GÜNCEL PROFİL ---");
 // console.log(guncelProfile);
 
-//Soru 4: 
+//Soru 4: Profil sayfasının en altında bir "İletişim ve Adres" kartı yapacağız.
+// const { location: { address: { street: cadde } } } = profile;
+// const { social: { twitter: xHesabi } } = profile;
+// console.log(cadde, xHesabi);
+
+//Soru 5:Belediye bir karar aldı ve Bağdat Caddesi'nin posta kodu değişti!
+// const yeniAdresProfil={
+//     ...profile,
+//     location:{
+//         ...profile.location,
+//         address:{
+//             ...profile.location.address,
+//             zip:34744
+//         }
+//     }
+// };
+// console.log(yeniAdresProfil);
+
+//Soru 6: Ali artık bir JavaScript uzmanı oldu! proProfil adında yeni bir obje oluştur.
+// const proProfil ={
+//     ...profile,
+//     username:"senior_ali",
+//     posts:[
+//         {
+//             id: 3, title: "Node.js ile Backend Dünyasi", likes: 1000,
+//             ...profile.posts
+//         }
+//     ]
+// };
+// console.log(proProfil);
