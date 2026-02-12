@@ -34,7 +34,7 @@
 
 // const programiBaslat = async () => {
 //     console.log("Sistem başlatılıyor...");
-    
+
 //     const girisSonucu = await girisYap();
 //     console.log(girisSonucu);
 
@@ -47,4 +47,36 @@
 // programiBaslat();
 
 // ----------- SORU 3 --------------
+
+// const kartOku = () => {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve("Kart başarıyla okundu.");
+//         }, 1000);
+//     });
+// };
+
+// const sifreKontrol = () => {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve("Şifre doğru,Giriş Yapılıyor..");
+//         }, 2000);
+//     });
+// };
+
+// const atmIslemi = async () => {
+//     console.log("Sistem Başlatılıyor..");
+
+//     const kart = await kartOku();
+//     console.log(kart);
+
+//     const sifre = await sifreKontrol();
+//     console.log(sifre);
+
+//     console.log("İşlem tamamlandı!");
+// };
+// atmIslemi();
+
+// ----------- SORU 4 --------------
+
 
