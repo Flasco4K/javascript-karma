@@ -37,29 +37,29 @@
 // }
 // veriyiGetir();
 
-const adres = "https://jsonplaceholder.typicode.com/users/1";
+// const adres = "https://jsonplaceholder.typicode.com/users/1";
 
-const veriyiGetir = async () => {
-    try {
-        console.log("1️⃣ İstek atılıyor...");
+// const veriyiGetir = async () => {
+//     try {
+//         console.log("1️⃣ İstek atılıyor...");
         
-        const cevap = await fetch(adres);
+//         const cevap = await fetch(adres);
         
-        console.log("2️⃣ Cevap geldi! Paket açılıyor...");
+//         console.log("2️⃣ Cevap geldi! Paket açılıyor...");
 
-        const veri = await cevap.json(); 
+//         const veri = await cevap.json(); 
 
-        const { name, email, phone } = veri;
+//         const { name, email, phone } = veri;
 
-        console.log("------------------------------------------------");
-        console.log(`👤 Kullanıcı: ${name}`);
-        console.log(`📧 İletişim: ${email}`);
-        console.log(`📞 Tel: ${phone}`);
-        console.log("------------------------------------------------");
+//         console.log("------------------------------------------------");
+//         console.log(`👤 Kullanıcı: ${name}`);
+//         console.log(`📧 İletişim: ${email}`);
+//         console.log(`📞 Tel: ${phone}`);
+//         console.log("------------------------------------------------");
 
-    } catch (error) {
-        console.log("❌ Hata Oldu:", error.message);
-    }
-};
+//     } catch (error) {
+//         console.log("❌ Hata Oldu:", error.message);
+//     }
+// };
 
-veriyiGetir();
+// veriyiGetir();
