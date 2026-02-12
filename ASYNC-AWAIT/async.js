@@ -79,4 +79,32 @@
 
 // ----------- SORU 4 --------------
 
+// const sunucuyaBaglan = () => {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve("Sunucuya Bağlanıldı");
+//         }, 2000);
+//     });
+// };
 
+// const kanalaGirisYap = (kanalAdi) => {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve(`${kanalAdi} kanalina girildi.`)
+//         }, 1000);
+//     });
+// };
+
+// const uygulamayiAc = async () => {
+//     console.log("Sistem Başlatılıyor..");
+
+//     const sunucu = await sunucuyaBaglan();
+//     console.log(sunucu);
+
+//     const genel = await kanalaGirisYap("Sohbet");
+//     console.log(genel);
+
+//     console.log("İşlem tamamlandı!");
+// };
+
+// uygulamayiAc();
