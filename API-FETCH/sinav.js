@@ -73,4 +73,40 @@
 
 // --------------- SORU 3 -------------------
 
+const okul = {
+    isim: "Atatürk Lisesi",
+    ogrenciler: [],
 
+    yoklamaAl: async function () {
+        try {
+            const adres = "https://jsonplaceholder.typicode.com/users";
+            const kargo = await fetch(adres);
+
+            const veri = await kargo.json();
+            this.ogrenciler = veri;
+            console.log("Yoklama Alindi!");
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    ciftNumaralariBul: function () {
+        const secilenler = [];
+        for (let i = 0; i < this.ogrenciler.length; i++) {
+            const ogrenci = this.ogrenciler[i];
+            if (ogrenci.id % 2 === 0) {
+                secilenler.push(ogrenci)
+            }
+        }
+        return secilenler;
+    }
+};
+const sistemiBaslat = async () => {
+    await okul.yoklamaAl();
+
+   const ciftOgrenciler =  okul.ciftNumaralariBul();
+   console.log("--- Çift Numaralılar Listesi ---");
+
+   ciftOgrenciler.forEach(ogr => {
+        console.log(`${ogr.id} - ${ogr.name}`);
+    });
+};
